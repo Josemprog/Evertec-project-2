@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/21070acbea.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -38,12 +39,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         @auth
-                        <a class="nav-link" href="{{ route('user.index') }}">Users</a>
+                        <a class="nav-link {{ request()->routeIs('home') ? 'lleve' : ''}}"
+                            href="{{ route('home') }}">Home</a>
                         @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <a class="nav-link {{ request()->routeIs('users.index') ? 'lleve' : ''}}"
+                            href="{{ route('users.index') }}">Users</a>
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">

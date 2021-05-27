@@ -22,6 +22,4 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
-Route::get('/users', function () {
-    return view('users');
-})->name('users.index');
+Route::resource('users', 'UserController')->middleware('verified');
