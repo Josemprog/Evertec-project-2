@@ -19,8 +19,9 @@ class UserSeeder extends Seeder
         $admin->email_verified_at = now();
         $admin->password = bcrypt('erosennin620');
         $admin->remember_token = Str::random(10);
+        $admin->admin = true;
         $admin->save();
 
-        factory(App\User::class, 100)->create();
+        factory(App\User::class, 9)->create();
     }
 }
