@@ -6,7 +6,7 @@
     <div class="menu-admin">
 
         <div class="d-flex flex-column mb-3">
-            <a href="{{ route('users.index') }}" class="mb-2 btn btn-dark" type="button">
+            <a href="{{ route('users.index') }}" class="mb-2 btn btn-info" type="button">
                 Back to Users
             </a>
         </div>
@@ -15,7 +15,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="w-75">
-            <h1 class="text-dark">Editing User <span style="color:rgb(39, 86, 161)">{{ $user->name }}</span>
+            <h1 class="text-info">Editing User <span style="color:rgb(39, 86, 161)">{{ $user->name }}</span>
             </h1>
             <form method="POST" action="{{ route('users.update', $user) }}" class="form-group">
                 @csrf
@@ -35,7 +35,7 @@
                 <br>
 
                 <select
-                    class="btn @if($user->enabled) btn-info @else btn-dark @endif btn-info btn-lg btn-block dropdown-toggle"
+                    class="btn @if($user->enabled) btn-primary @else btn-dark @endif btn-primary btn-lg btn-block dropdown-toggle"
                     name="enabled">
                     @if ($user->enabled)
                     <option value=1 selected>Enabled</option>
@@ -46,7 +46,7 @@
                     @endif
                 </select>
 
-                <button type="submit" class="btn btn-dark btn-lg btn-block">Edit User</button>
+                <button type="submit" class="btn btn-info btn-lg btn-block">Edit User</button>
 
             </form>
         </div>

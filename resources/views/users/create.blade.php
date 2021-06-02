@@ -6,7 +6,7 @@
     <div class="menu-admin">
 
         <div class="d-flex flex-column mb-3">
-            <a href="{{ route('users.index') }}" class="mb-2 btn btn-dark" type="button">
+            <a href="{{ route('users.index') }}" class="mb-2 btn btn-info" type="button">
                 Back to Users
             </a>
         </div>
@@ -15,7 +15,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="w-75">
-            <h1 class="text-dark">Creating a new User</h1>
+            <h1 class="text-info">Creating a new User</h1>
             <form method="POST" action=" {{ route('users.store')}} " class="form-group">
                 @csrf
 
@@ -33,7 +33,7 @@
 
                 <br>
 
-                <button type="submit" class="btn btn-dark btn-lg btn-block">Create</button>
+                <button type="submit" class="btn btn-info btn-lg btn-block">Create</button>
 
             </form>
         </div>
